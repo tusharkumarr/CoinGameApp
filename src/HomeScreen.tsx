@@ -10,6 +10,7 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
   const cards: { title: string; description: string; navigateTo: keyof RootStackParamList }[] = [
     { title: "Flappy Bird", description: "Fun with bird and pipe", navigateTo: "FlappyBird" },
     { title: "Coin Game", description: "Add coin in your wallet", navigateTo: "CoinGame" },
+    { title: "Memory Game", description: "Check your memory", navigateTo: "MemoryGame" },
   ];
 
   return (
