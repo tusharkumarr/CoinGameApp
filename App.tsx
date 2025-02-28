@@ -7,13 +7,15 @@ import HomeScreen from './src/HomeScreen';
 import FlappyBird from './src/FlappyBird';
 import CoinGame from './src/CoinGame';
 import MemoryGame from './src/MemoryGame';
+import RockPaperScissors from './src/RockPaperScissors';
 
 // Define the navigation stack types
 export type RootStackParamList = {
   Home: undefined;
   FlappyBird: { title: string; description: string };
   CoinGame: undefined;
-  MemoryGame: undefined
+  MemoryGame: undefined;
+  RockPaperScissors: undefined;
 };
 
 // Create the Stack Navigator
@@ -37,6 +39,7 @@ const App = (): React.JSX.Element => {
         <Stack.Screen name="FlappyBird" component={FlappyBird} />
         <Stack.Screen name="CoinGame" component={CoinGame} />
         <Stack.Screen name="MemoryGame" component={MemoryGame} />
+        <Stack.Screen name="RockPaperScissors" component={RockPaperScissors} />
       </Stack.Navigator>
     </NavigationContainer>
   );
