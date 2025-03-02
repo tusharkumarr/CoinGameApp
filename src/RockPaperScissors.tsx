@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Animated, ActivityIndicator } from "react-native";
+import AdsManager from "./Component/AdsManager";
 
 type Choice = { name: string; emoji: string };
 
@@ -141,6 +142,9 @@ const RockPaperScissors = () => {
                 <Text style={styles.buttonText}>{choice.emoji}</Text>
               </TouchableOpacity>
             ))}
+          </View>
+          <View>
+            <AdsManager/>
           </View>
         </>
       )}

@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { View, Text, StyleSheet, Dimensions, TouchableWithoutFeedback } from "react-native";
 import { GameEngine } from "react-native-game-engine";
 import Matter from "matter-js";
+import AdsManager from "./Component/AdsManager";
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
 const PIPE_WIDTH = 70;
@@ -200,6 +201,9 @@ const FlappyBird = () => {
             </Text>
           </View>
         )}
+        <View style={{ position: "absolute", bottom: 0, width: "100%" }}>
+        <AdsManager />
+      </View>
       </View>
     </TouchableWithoutFeedback>
   );

@@ -1,4 +1,8 @@
 {
   "name": "CoinGameApp",
-  "displayName": "CoinGameApp"
+  "displayName": "CoinGameApp",
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-8213862094938085~7049039366",
+    "ios_app_id": "ca-app-pub-8213862094938085~7049039366"
+  }
 }

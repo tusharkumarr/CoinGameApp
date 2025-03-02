@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Alert } from "react-native";
+import AdsManager from "./Component/AdsManager";
 
 // Sample emojis for memory game
 const emojis = ["🍎", "🍌", "🍇", "🍓", "🍉", "🍍", "🥑", "🥕"];
@@ -70,6 +71,7 @@ export default function MemoryGame() {
             </Text>
           </TouchableOpacity>
         ))}
+        <AdsManager/>
       </View>
     </View>
   );

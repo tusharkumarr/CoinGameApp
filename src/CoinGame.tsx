@@ -1,5 +1,19 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
+import mobileAds, { MaxAdContentRating } from 'react-native-google-mobile-ads';
+import AdsManager from './Component/AdsManager';
+
+// Configure AdMob
+mobileAds()
+  .setRequestConfiguration({
+    maxAdContentRating: MaxAdContentRating.PG,
+    tagForChildDirectedTreatment: true,
+    tagForUnderAgeOfConsent: true,
+    testDeviceIdentifiers: ['EMULATOR'],
+  })
+  .then(() => {
+    console.log("AdMob Configured");
+  });
 
 const CoinGame = () => {
   const [coins, setCoins] = useState(0);
@@ -13,21 +27,26 @@ const CoinGame = () => {
     ]).start();
   };
 
-    function alert(arg0: string): void {
-        throw new Error('Function not implemented.');
-    }
+  function alert(arg0: string): void {
+    throw new Error('Function not implemented.');
+  }
 
   return (
     <View style={styles.container}>
       <Text style={styles.coinText}>Coins: {coins}</Text>
+      
       <Animated.View style={{ transform: [{ scale: scaleAnim }] }}>
         <TouchableOpacity style={styles.button} onPress={handleTap}>
           <Text style={styles.buttonText}>Tap to Earn Coins</Text>
         </TouchableOpacity>
       </Animated.View>
+      
       <TouchableOpacity style={styles.redeemButton} onPress={() => alert(`Redeemed ${coins} coins!`)}>
         <Text style={styles.buttonText}>Redeem</Text>
       </TouchableOpacity>
+
+      {/* Use the AdsManager Component */}
+      <AdsManager />
     </View>
   );
 };
